@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { ActualizarComponent } from './componentes/actualizar/actualizar.component';
 
 export const routes: Routes = [
     {
@@ -8,5 +9,8 @@ export const routes: Routes = [
     },
     {
         path:'formulario' , component:FormularioComponent
+    },
+    {
+        path:'autos/:id', component: ActualizarComponent
     }
 ];

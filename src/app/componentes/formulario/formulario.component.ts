@@ -1,25 +1,32 @@
 import { Component } from '@angular/core';
+import { AutoService } from '../../servicios/auto.service';
+import { FormsModule } from '@angular/forms';
+import { ListaAutosComponent } from "../lista-autos/lista-autos.component";
 
 @Component({
   selector: 'app-formulario',
-  imports: [],
+  imports: [FormsModule, ListaAutosComponent],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })
 export class FormularioComponent {
-  vehiculo = {
-    tipo: '',
-    marca: '',
-    modelo: '',
-    anio: null,
-    placa: ''
-  };
+  
+    tipo:string='';
+    marca: string= '';
+    modelo: string= '';
+    anio: number= 0;
+    placa: string=''
+  
 
   tipos = ['Automóvil', 'Camioneta', 'Motocicleta', 'Camión', 'Bus', 'Otro'];
 
-  guardar() {
-    console.log('Datos del vehículo:', this.vehiculo);
-    alert('Vehículo registrado correctamente.');
+
+  constructor( private ServicioAuto:AutoService){}
+
+  guardar(formulario:any) {
+    this.ServicioAuto.guardarAuto(formulario.value).subscribe(()=>{
+      window.location.reload();
+    })
   }
 }
 

@@ -1,34 +1,29 @@
-<form onsubmit="enviarFormulario()" class="max-w-lg mx-auto bg-white p-8 rounded shadow-md">
+<form onsubmit="enviarFormulario()" #formulario="ngForm" (ngSubmit)="guardar(formulario)" class="max-w-lg mx-auto bg-white p-8 rounded shadow-md">
     <h2 class="text-2xl font-bold mb-6 text-center">Registro de Vehículos</h2>
 
     <!-- Tipo de vehículo -->
-    <label for="tipo" class="block mb-2">Tipo de Vehículo</label>
-    <select id="tipo" name="tipo" required class="w-full mb-4 p-2 border border-gray-300 rounded">
-      <option value="">Seleccione...</option>
-      <option value="automovil">Automóvil</option>
-      <option value="camioneta">Camioneta</option>
-      <option value="motocicleta">Motocicleta</option>
-      <option value="camión">Camión</option>
-      <option value="bus">Bus</option>
-      <option value="otro">Otro</option>
-    </select>
+    <!-- Tipo -->
+    <label for="marca" class="block mb-2" >Tipo Del Vehículo</label>
+    <input [(ngModel)]="tipo" type="text" id="tipo" name="tipo" required class="w-full mb-4 p-2 border border-gray-300 rounded" placeholder="Automovil-Camioneta-Motocicleta,etc" >
 
     <!-- Marca -->
     <label for="marca" class="block mb-2">Marca</label>
-    <input type="text" id="marca" name="marca" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+    <input [(ngModel)]="marca" type="text" id="marca" name="marca" required class="w-full mb-4 p-2 border border-gray-300 rounded">
 
     <!-- Modelo -->
     <label for="modelo" class="block mb-2">Modelo</label>
-    <input type="text" id="modelo" name="modelo" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+    <input type="text" [(ngModel)]="modelo" id="modelo" name="modelo" required class="w-full mb-4 p-2 border border-gray-300 rounded">
 
     <!-- Año -->
     <label for="anio" class="block mb-2">Año</label>
-    <input type="number" id="anio" name="anio" min="1900" max="2099" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+    <input [(ngModel)]="anio" type="number" id="anio" name="anio" min="1900" max="2099" required class="w-full mb-4 p-2 border border-gray-300 rounded">
 
     <!-- Placa -->
     <label for="placa" class="block mb-2">Número de Placa</label>
-    <input type="text" id="placa" name="placa" required class="w-full mb-6 p-2 border border-gray-300 rounded">
+    <input [(ngModel)]="placa" type="text" id="placa" name="placa" required class="w-full mb-6 p-2 border border-gray-300 rounded">
 
     <!-- Botón -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full">Registrar Vehículo</button>
+    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full" >Registrar Vehículo</button>
   </form>
+
+  <app-lista-autos></app-lista-autos>
