@@ -1,34 +1,61 @@
-<form onsubmit="enviarFormulario()" class="max-w-lg mx-auto bg-white p-8 rounded shadow-md">
-    <h2 class="text-2xl font-bold mb-6 text-center">Registro de Vehículos</h2>
+<br>
+<br>
 
-    <!-- Tipo de vehículo -->
-    <label for="tipo" class="block mb-2">Tipo de Vehículo</label>
-    <select id="tipo" name="tipo" required class="w-full mb-4 p-2 border border-gray-300 rounded">
-      <option value="">Seleccione...</option>
-      <option value="automovil">Automóvil</option>
-      <option value="camioneta">Camioneta</option>
-      <option value="motocicleta">Motocicleta</option>
-      <option value="camión">Camión</option>
-      <option value="bus">Bus</option>
-      <option value="otro">Otro</option>
-    </select>
+<form onsubmit="enviarFormulario()" class="max-w-md mx-auto bg-white p-10 rounded-2xl shadow-lg border-4 border-gray-400">
+  <h2 class="text-4xl font-bold mb-10 text-center text-gray-800 tracking-wide">🚗Registro de Vehículos🚗</h2>
 
-    <!-- Marca -->
-    <label for="marca" class="block mb-2">Marca</label>
-    <input type="text" id="marca" name="marca" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+  <!-- Tipo de vehículo -->
+  <label for="tipo" class="block mb-2 font-medium text-gray-700">Tipo de Vehículo</label>
+  <select
+    id="tipo"
+    name="tipo"
+    required
+    class="w-full mb-6 p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
+  >
+    <option value="" disabled selected>Seleccione...</option>
+    <option value="automovil">Automóvil</option>
+    <option value="camioneta">Camioneta</option>
+    <option value="camión">Camión</option>
+  </select>
 
-    <!-- Modelo -->
-    <label for="modelo" class="block mb-2">Modelo</label>
-    <input type="text" id="modelo" name="modelo" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+  <!-- Marca -->
+  <label for="marca" class="block mb-2 font-medium text-gray-700">Marca</label>
+  <input
+    type="text"
+    id="marca"
+    name="marca"
+    required
+    class="w-full mb-6 p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
+  />
 
-    <!-- Año -->
-    <label for="anio" class="block mb-2">Año</label>
-    <input type="number" id="anio" name="anio" min="1900" max="2099" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+  <!-- Modelo -->
+  <label for="modelo" class="block mb-2 font-medium text-gray-700">Modelo</label>
+  <input
+    type="text"
+    id="modelo"
+    name="modelo"
+    required
+    class="w-full mb-6 p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
+  />
 
-    <!-- Placa -->
-    <label for="placa" class="block mb-2">Número de Placa</label>
-    <input type="text" id="placa" name="placa" required class="w-full mb-6 p-2 border border-gray-300 rounded">
+  <!-- Año -->
+  <label for="anio" class="block mb-2 font-medium text-gray-700">Año</label>
+  <input
+    type="number"
+    id="anio"
+    name="anio"
+    min="1900"
+    max="2025"
+    required
+    class="w-full mb-6 p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-gray-500 transition"
+  />
 
-    <!-- Botón -->
-    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full">Registrar Vehículo</button>
-  </form>
+
+  <!-- Botón gris sólido -->
+  <button
+    type="submit"
+    class="w-full bg-gray-600 text-white font-semibold py-4 rounded-xl hover:bg-gray-700 active:scale-95 shadow-md transition-all duration-300"
+  >
+    Registrar Vehículo
+  </button>
+</form>
