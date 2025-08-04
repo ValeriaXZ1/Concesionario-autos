@@ -4,4 +4,5 @@ export interface Autos {
     modelo: string;
     anio: number;
     placa: string;
+
 }

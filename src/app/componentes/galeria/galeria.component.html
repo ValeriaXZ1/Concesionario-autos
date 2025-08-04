@@ -1,24 +1,74 @@
+<!-- Galería de imágenes -->
+<div class="max-w-7xl mx-auto p-6">
+  <!-- Imagen destacada -->
+  <div class="mb-8">
+    <img
+      class="w-[600px] h-[600px] rounded-xl cursor-pointer mx-auto block shadow-lg transition-transform duration-300 hover:scale-105"
+      src="https://www.excelenciasdelmotor.com/sites/default/files/sites/default/files/imagenes-portada-ffp/chevroletlogo.jpg"
+      alt="Marca Chevrolet"
+      (click)="mostrarInfo('Chevrolet es un fabricante de automóviles y camiones con sede en Detroit, Míchigan, Estados Unidos, como una división de General Motors.')"
+    />
+  </div>
 
+  <!-- Imágenes pequeñas -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+    <img
+      class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+      src="https://e7.pngegg.com/pngimages/622/37/png-clipart-great-wall-of-china-great-wall-motors-car-great-wall-wingle-great-wall-of-china-trademark-logo.png"
+      alt="Marca Wingle"
+      (click)="mostrarInfo('Wingle hace referencia a la línea de camionetas pickup producidas por Great Wall Motors (GWM), una empresa china')"
+    />
 
-<div class="grid gap-4">
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
-    </div>
-    <div class="grid grid-cols-5 gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
-        </div>
-    </div>
+    <img
+      class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Mazda_logo_with_emblem%2C_new.svg/1200px-Mazda_logo_with_emblem%2C_new.svg.png"
+      alt="Mazda"
+      (click)="mostrarInfo('Mazda es una marca japonesa reconocida por su diseño y tecnología avanzada.')"
+    />
+
+    <img
+      class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+      src="https://www.pngplay.com/wp-content/uploads/13/Kia-Logo-PNG-Photos.png"
+      alt="Kia"
+      (click)="mostrarInfo('Kia es una marca surcoreana con creciente popularidad por sus autos accesibles y confiables.')"
+    />
+
+    <img
+      class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+      src="https://logos-world.net/wp-content/uploads/2021/10/Suzuki-Emblem.png"
+      alt="Suzuki"
+      (click)="mostrarInfo('Suzuki es conocida por sus vehículos compactos y motocicletas eficientes.')"
+    />
+
+    <img
+      class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+      src="https://1000logos.net/wp-content/uploads/2018/02/Toyota-logo.png"
+      alt="Toyota"
+      (click)="mostrarInfo('Toyota es un gigante automotriz mundial famoso por su durabilidad y tecnología híbrida.')"
+    />
+  </div>
 </div>
+
+<!-- Modal -->
+<div
+  class="fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300"
+  [class.hidden]="!modalAbierto"
+>
+  <div
+    class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative transform transition-transform duration-300 scale-100"
+  >
+    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Información de la imagen</h2>
+    <p class="mb-8 text-gray-700 leading-relaxed">{{ infoSeleccionada }}</p>
+
+    <div class="flex justify-end">
+      <button
+        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        (click)="cerrarModal()"
+      >
+        Cerrar
+      </button>
+    </div>
+  </div>
+</div>
+
+

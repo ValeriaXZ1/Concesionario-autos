@@ -11,7 +11,7 @@ import { ListaAutosComponent } from "../lista-autos/lista-autos.component";
 })
 export class FormularioComponent {
   
-    tipo:string='';
+    tipo= ['Automóvil', 'Camioneta', 'Motocicleta', 'Camión', 'Bus', 'Otro'];
     marca: string= '';
     modelo: string= '';
     anio: number= 0;
