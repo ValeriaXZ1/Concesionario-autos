@@ -12,7 +12,6 @@ export class FormularioComponent {
     marca: '',
     modelo: '',
     anio: null,
-    placa: ''
   };
 
   tipos = ['Automóvil', 'Camioneta', 'Motocicleta', 'Camión', 'Bus', 'Otro'];
