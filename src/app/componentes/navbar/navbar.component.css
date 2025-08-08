@@ -47,3 +47,9 @@
     mix-blend-mode: normal;
     background-repeat: no-repeat;
 }
+.cerrar{
+    width: auto;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgba(78, 0, 0, 0.308);
+}

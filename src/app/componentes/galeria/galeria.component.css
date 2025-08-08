@@ -20,6 +20,9 @@
     position: absolute;
     background-color: rgba(10, 10, 10, 0.329);
 }
+.imagenesCar:hover {
+    transform: scale(1.05);
+}
 .botonImg {
     position: absolute;
     top: 600px;
@@ -43,4 +46,7 @@
     border-radius: 20px;
     position: relative;
     top: -30px;
+}
+.imgToyota:hover {
+    transform: scale(1.05);
 }
