@@ -16,7 +16,6 @@ export class AutoService {
 
   guardarAuto(autos:any):Observable<any>{
     return this.http.post(`${this.API_AUTO}/autos.json`,autos)
-    
   }
 
   agregarAutos(): Observable<any>{
@@ -24,11 +23,11 @@ export class AutoService {
   }
 
   getAutoById(tipo:string): Observable<any>{
-    return this.http.get(`${this.API_AUTO}/autos/${tipo}.json`);
+    return this.http.get(`${this.API_AUTO}/autos${tipo}.json`);
   }
 
   eliminarAuto(tipo:string):Observable<any>{
-    return this.http.delete(`${this.API_AUTO}/autos/${tipo}.json`);
+    return this.http.delete(`${this.API_AUTO}/autos${tipo}.json`);
   }
 
   actualizar(tipo:string, auto:any): Observable<any>{

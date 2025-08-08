@@ -3,49 +3,69 @@
   <!-- Imagen destacada -->
   <div class="mb-8">
     <img
-      class="w-[600px] h-[600px] rounded-xl cursor-pointer mx-auto block shadow-lg transition-transform duration-300 hover:scale-105"
-      src="https://www.excelenciasdelmotor.com/sites/default/files/sites/default/files/imagenes-portada-ffp/chevroletlogo.jpg"
+      class="imagen"
+      src="https://chery.cl/wp-content/uploads/2024/10/1920X888-3.jpg"
       alt="Marca Chevrolet"
-      (click)="mostrarInfo('Chevrolet es un fabricante de automóviles y camiones con sede en Detroit, Míchigan, Estados Unidos, como una división de General Motors.')"
-    />
+      
+      />
+      <div class="textoimg" >
+        texto de la imagen destacada
+        <p class="pimagen" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus modi libero soluta consectetur expedita nesciunt et! Neque voluptatum quos deleniti. Libero ex soluta cupiditate animi obcaecati tempora eius iste vero?</p>
+        
+      </div>
+      <button class="botonImg" (click)="mostrarInfo('Chevrolet es un fabricante de automóviles y camiones con sede en Detroit, Míchigan, Estados Unidos, como una división de General Motors.')" >IMFORMACIÓN</button>
   </div>
 
   <!-- Imágenes pequeñas -->
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+    <div>
     <img
       class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
-      src="https://e7.pngegg.com/pngimages/622/37/png-clipart-great-wall-of-china-great-wall-motors-car-great-wall-wingle-great-wall-of-china-trademark-logo.png"
+      src="https://images.netdirector.co.uk/gforces-auto/image/upload/q_auto,c_fill,f_auto,fl_lossy,w_1920,h_873/auto-client/f04644d7b9ae6b8469d12f6b0082f313/mg_hs_order.jpg"
       alt="Marca Wingle"
       (click)="mostrarInfo('Wingle hace referencia a la línea de camionetas pickup producidas por Great Wall Motors (GWM), una empresa china')"
-    />
-
+    /> <br> <h5>Great Wall M</h5> <h6>GWM impulsa un ecosistema sostenible de movilidad inteligente con desarrollos como su tecnología híbrida Hi4 y un sistema energético integral.</h6>
+  </div>
+  <div>
     <img
       class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
-      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Mazda_logo_with_emblem%2C_new.svg/1200px-Mazda_logo_with_emblem%2C_new.svg.png"
+      src="https://www.radioformula.com.mx/__export/1753732987618/sites/formula/img/2025/01/01/20250728_050307109_Estos_son_los_3_autos_de_Mazda_que_vale_la_pena_comprar_en_2025x_segxn_la_IA-1.jpg_1947236187.jpg"
       alt="Mazda"
       (click)="mostrarInfo('Mazda es una marca japonesa reconocida por su diseño y tecnología avanzada.')"
-    />
-
+    /> <br> <h5>MAZDA</h5> <h6>Conoce la amplia variedad de modelos Mazda en nuestros concesionarios de autos en Ecuador.</h6>
+  </div>
+    <div>
     <img
       class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
-      src="https://www.pngplay.com/wp-content/uploads/13/Kia-Logo-PNG-Photos.png"
+      src="https://images.ctfassets.net/yt0cagkwdfj9/OcNoJdd4TuUv4DIhYkvqT/276b7b2b856570c3bd49366c90487b87/Banner-Kia-1.png?w=1920&h=1080&q=50&fm=png"
       alt="Kia"
       (click)="mostrarInfo('Kia es una marca surcoreana con creciente popularidad por sus autos accesibles y confiables.')"
-    />
-
+    /> <br><h5>KIA</h5>
+    <h6>KIA, la marca más elegida por todo el mundo, que nos hace mantenemos fieles a nuestros principios, firmes a nuestra voluntad de ser referente en el sector, con criterios de calidad, servicio y eficacia.</h6>
+    </div>
+    <div>
     <img
       class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
-      src="https://logos-world.net/wp-content/uploads/2021/10/Suzuki-Emblem.png"
+      src="https://tse1.mm.bing.net/th/id/OIP.aawM6fecfv2Z3Wm6dMzV_gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
       alt="Suzuki"
       (click)="mostrarInfo('Suzuki es conocida por sus vehículos compactos y motocicletas eficientes.')"
-    />
-
+    /> <br> <h5>SUZUKI</h5> <h6>La historia de Suzuki es un testimonio de su capacidad para innovar y evolucionar en un mercado competitivo.</h6>
+    </div>
+    <div>
     <img
-      class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
-      src="https://1000logos.net/wp-content/uploads/2018/02/Toyota-logo.png"
+      class="imgToyota" id="imgToyota"
+      src="https://fondosmil.co/fondo/71548.jpg"
       alt="Toyota"
       (click)="mostrarInfo('Toyota es un gigante automotriz mundial famoso por su durabilidad y tecnología híbrida.')"
-    />
+    /> <h5>TOYOTA</h5> <h6>Toyota es reconocida por su enfoque en la innovación, siendo la primera en comercializar vehículos híbridos a gran escala con el lanzamiento del Toyota Prius.</h6>
+    </div>
+    <div>
+    <img
+      class="max-w-[150px] h-auto rounded-xl cursor-pointer shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+      src="https://i.ytimg.com/vi/mP3fLAdSR3M/maxresdefault.jpg"
+      alt="BMW"
+      (click)="mostrarInfo('Suzuki es conocida por sus vehículos compactos y motocicletas eficientes.')"
+    /> <br> <h5>BMW</h5> <h6> Los diseños de los BMW están minuciosamente optimizados para reducir la resistencia al aire, lo que resulta en velocidades más altas y un mejor ahorro de combustible. </h6>
   </div>
 </div>
 

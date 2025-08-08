@@ -1,0 +1,41 @@
+.textoimg {
+    position: absolute;
+    top: 280px;
+    left: 100px;
+    color: rgb(241, 235, 235);
+    font-size: 54px;
+    font-weight: lighter;
+}
+.pimagen {
+    font-size: 12px;
+    color: #fff;
+    margin-top: 20px;
+    text-align: justify;
+    padding: 0px;
+    position: absolute;
+    background-color: rgba(10, 10, 10, 0.329);
+}
+.imagen{
+    border-end-start-radius: 750px;
+    
+}
+.conoceNosotros{
+    position: relative;
+    top: 10px;
+    left: 30px;
+    width: 650px;
+    height: auto;
+    border-radius: 20px;
+    background-color: rgba(51, 51, 51, 0.308);
+}
+.card1 {
+    width: 500px;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;   
+}
+.card1:hover {
+    transform: scale(1.05);
+}

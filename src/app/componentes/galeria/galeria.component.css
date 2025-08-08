@@ -1,0 +1,46 @@
+.imagen{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.textoimg {
+    position: absolute;
+    top: 350px;
+    left: 200px;
+    color: rgb(241, 235, 235);
+    font-size: 24px;
+    font-weight: lighter;
+}
+.pimagen {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 20px;
+    text-align: justify;
+    padding: 0px;
+    position: absolute;
+    background-color: rgba(10, 10, 10, 0.329);
+}
+.botonImg {
+    position: absolute;
+    top: 600px;
+    left: 200px;
+    padding: 10px 20px;
+    background-color: #0a488a65;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+.botonImg:hover {
+    background-color: #084a8a;
+}
+.imgToyota{
+    width: 650px;
+    height: auto;
+    border-radius: 20px;
+    position: relative;
+    top: -30px;
+}
