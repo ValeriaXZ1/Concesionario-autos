@@ -9,6 +9,6 @@ export const authentGuard: CanActivateFn = (route, state) => {
     return true;
   }else{
     localStorage.setItem('redirectUrl', state.url);
-    return router.parseUrl('/registro');
+    return router.parseUrl('/login');
   }
 };

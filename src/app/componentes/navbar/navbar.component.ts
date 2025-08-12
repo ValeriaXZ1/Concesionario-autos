@@ -20,6 +20,7 @@ export class NavbarComponent {
 
   logout=()=> {
     this.authentication.inicioSesion();
-    this.router.navigateByUrl('/')
+    const redireccion = '/';
+    this.router.navigateByUrl(redireccion);
 }
 }
