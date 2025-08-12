@@ -1,58 +1,42 @@
-.textoimg {
-    position: absolute;
-    top: 280px;
-    left: 100px;
-    color: rgb(241, 235, 235);
-    font-size: 54px;
-    font-weight: lighter;
-}
-.pimagen {
-    font-size: 12px;
-    color: #fff;
-    margin-top: 20px;
-    text-align: justify;
-    padding: 0px;
-    position: absolute;
-    background-color: rgba(10, 10, 10, 0.329);
-}
-.imagen{
-    border-end-start-radius: 750px;
-    
-}
-.conoceNosotros{
-    position: relative;
-    top: 10px;
-    left: 30px;
-    width: 650px;
-    height: auto;
-    border-radius: 20px;
-    background-color: rgba(51, 51, 51, 0.308);
-}
-.card1 {
-    width: 500px;
+  /* Mantengo los estilos elegantes y agrego detalles para concesionario */
+  .card1 {
+    border-radius: 0.75rem; /* rounded-lg */
+    box-shadow: 0 8px 16px rgba(227, 221, 221, 0);
     transition: transform 0.3s ease;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 20px;   
-}
-.card1:hover {
-    transform: scale(1.015);
-}
-.botonImg {
-    
-    top: 600px;
-    left: 200px;
-    padding: 10px 20px;
-    background-color: #0a488a65;
+  }
+  .card1:hover {
+    transform: scale(1.03);
+  }
+
+  .botonImg {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    background-color: #1E40AF; /* azul más serio y profesional */
     color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    font-weight: bold;
-}
-.botonImg:hover {
-    transform: scale(1.05);
-}
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .botonImg:hover {
+    background-color: #1E3A8A; /* azul más oscuro */
+    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.6);
+  }
+
+  .textoElegante {
+    background: #F3F4F6; 
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  }
+
+  hr {
+    border-color: #E5E7EB;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
