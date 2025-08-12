@@ -1,38 +1,54 @@
-import { Component } from '@angular/core';
-import { Autos} from '../../interface/autos';
+import { Component, OnInit } from '@angular/core';
 import { AutoService } from '../../servicios/auto.service';
-import { RouterLink } from '@angular/router';
+import { Autos } from '../../interface/autos';
+import { CommonModule } from '@angular/common'; // Importa CommonModule para @for
+import { RouterLink } from '@angular/router'; // Importa RouterLink para la navegación
 
 @Component({
   selector: 'app-lista-autos',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [CommonModule, RouterLink], // Agrega CommonModule y RouterLink
   templateUrl: './lista-autos.component.html',
-  styleUrl: './lista-autos.component.css'
+  styleUrls: ['./lista-autos.component.css']
 })
-export class ListaAutosComponent {
-  autos: Autos[]=[];
+export class ListaAutosComponent implements OnInit {
 
-  constructor(private servicioAuto: AutoService){}
+  autos: Autos[] = [];
 
-  ngOnInit():void{
-    this.servicioAuto.agregarAutos().subscribe(data =>{
-      this.autos=Object.keys(data).map(key=>({
-        tipo:key, 
-        ...data[key]
-      }));
-    });
+  constructor(private servicioAuto: AutoService) { }
+
+  ngOnInit(): void {
+    this.cargarAutos();
   }
 
-  eliminarAuto(tipo:string):void{
-    
-    
-    this.servicioAuto.eliminarAuto(tipo).subscribe(()=>{
-      this.autos=this.autos.filter(autos => autos.tipo !==tipo);
-    }, error=>{
-      console.log('no se puede eliminar', error);
-      
+  cargarAutos(): void {
+    this.servicioAuto.agregarAutos().subscribe(
+      (data) => {
+        this.autos = data;
+      },
+      (error) => {
+        console.error('Error al cargar autos:', error);
+      }
+    );
+  }
+
+  eliminarAuto(key: string | undefined): void {
+    if (key) {
+      if (window.confirm('¿Estás seguro de que quieres eliminar este auto?')) {
+        this.servicioAuto.eliminarAuto(key).subscribe(
+          () => {
+            console.log('Auto eliminado con éxito');
+            // Recargar la lista después de eliminar
+            this.cargarAutos();
+          },
+          (error) => {
+            console.error('Error al eliminar auto:', error);
+          }
+        );
+      }
+    } else {
+      console.error('No se pudo obtener la clave para eliminar el auto.');
     }
-  )
   }
-
 }
+

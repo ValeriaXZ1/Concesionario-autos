@@ -1,52 +1,76 @@
-.imagen{
+/* Imagen genérica */
+.imagen {
     width: 100%;
     height: auto;
     border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.textoimg {
-    position: absolute;
-    top: 350px;
-    left: 200px;
-    color: rgb(241, 235, 235);
-    font-size: 24px;
-    font-weight: lighter;
-}
-.pimagen {
-    font-size: 16px;
-    color: #fff;
-    margin-top: 20px;
-    text-align: justify;
-    padding: 0px;
-    position: absolute;
-    background-color: rgba(10, 10, 10, 0.329);
-}
+
 .imagenesCar:hover {
     transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
-.botonImg {
-    position: absolute;
-    top: 600px;
-    left: 200px;
-    padding: 10px 20px;
-    background-color: #0a488a65;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    font-weight: bold;
+
+.imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
-.botonImg:hover {
-    background-color: #084a8a;
+
+.imagen:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
-.imgToyota{
+
+/* Imagen Toyota */
+.imgToyota {
     width: 650px;
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
     position: relative;
     top: -30px;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 .imgToyota:hover {
     transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
+
+/* Carrusel */
+.carousel {
+  width: 100%; 
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.carousel-track {
+  display: flex;
+  width: 300%;
+  animation: slide 10s infinite; 
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 350px; 
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+
