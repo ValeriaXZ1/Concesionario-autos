@@ -19,13 +19,21 @@
         </li>
         <li>
           <a routerLink="vehiculos" class="nav-enlace">Vehículos</a>
+        </li>
+        
+          <li>
+            @if (!authentication.inicioSesion()) {
+          <a routerLink="login" class="nav-enlace">Iniciar Seción</a>
+        }
+        </li>
+          
         <li>
           @if (!authentication.login) {
             <a routerLink="registro" class="nav-enlace">Registrarse</a>
           }
         </li>
         <li class="cerrar" >
-          <a routerLink="#" class="nav-enlace">Cerrar Sesión</a>
+          <a (click)="logout()" class="nav-enlace">Cerrar Sesión</a>
         </li>
       </ul>
     </div>

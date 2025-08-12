@@ -18,7 +18,7 @@ export class LoginComponent {
   login=() => {
     const loginExitoso = this.authentication.login(this.usuario, this.password);
     if (loginExitoso) {
-    const redireccion= localStorage.getItem('redirectUrl') || '/cursos';
+    const redireccion= localStorage.getItem('redirectUrl') || '/vehiculos';
       localStorage.removeItem('redirectUrl');
       this.router.navigateByUrl(redireccion);
     }else{

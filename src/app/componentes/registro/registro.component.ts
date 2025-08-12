@@ -9,6 +9,9 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class RegistroComponent {
   formulario!: FormGroup;
+  formularioRegistro=()=>{
+    return this.enviarFormulario && Object.values(this.registrar).some(valor => valor.trim?.() !== '');
+  };
 
   constructor(private formG: FormBuilder) {}
   enviarFormulario: boolean = false;

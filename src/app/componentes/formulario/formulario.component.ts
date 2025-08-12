@@ -5,7 +5,7 @@ import { ListaAutosComponent } from "../lista-autos/lista-autos.component";
 
 @Component({
   selector: 'app-formulario',
-  imports: [FormsModule, ListaAutosComponent],
+  imports: [FormsModule],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })

@@ -7,7 +7,13 @@ import { NostrosComponent } from './componentes/nostros/nostros.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { authentGuard } from './guardianes/authent.guard';
 import { VehiculosComponent } from './componentes/vehiculos/vehiculos.component';
+
 import { ListaAutosComponent } from './componentes/lista-autos/lista-autos.component';
+
+import { LoginComponent } from './componentes/login/login.component';
+import { loginGuard } from './guardianes/login.guard';
+import { registroGuard } from './guardianes/registro.guard';
+
 
 
 export const routes: Routes = [
@@ -42,8 +48,26 @@ export const routes: Routes = [
         canActivate: [authentGuard]
     },
    
-
-
-
+{
+        path:'autos/:id', component: ActualizarComponent
+    },
+    {
+        path:'login', component:LoginComponent, canMatch: [loginGuard]
+    },
+    {
+        path:'nosotros', component: NostrosComponent
+    },
+    {
+        path:'registro', component: RegistroComponent, canDeactivate: [registroGuard]
+    },
+    {
+        path:'vehiculos', component:VehiculosComponent, canActivate: [authentGuard]
+    },
+    {
+        path: 'autos/:id', component: ActualizarComponent
+    },
+    {
+        path: 'nosotros', component: NostrosComponent
+    }
 
 ];
