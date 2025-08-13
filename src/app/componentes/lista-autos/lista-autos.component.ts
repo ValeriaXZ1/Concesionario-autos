@@ -1,5 +1,6 @@
+// src/app/componentes/lista-autos/lista-autos.component.ts
 import { Component, OnInit } from '@angular/core';
-import { AutoService } from '../../servicios/auto.service';
+import { AutoService } from '../../servicios/auto.service'; // Asegúrate de que esta ruta sea la correcta
 import { Autos } from '../../interface/autos';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router'; 
@@ -23,10 +24,10 @@ export class ListaAutosComponent implements OnInit {
 
   cargarAutos(): void {
     this.servicioAuto.agregarAutos().subscribe(
-      (data) => {
+      (data: Autos[]) => { // Corrección: tipado explícito del parámetro 'data'
         this.autos = data;
       },
-      (error) => {
+      (error) => { // Corrección: tipado explícito del parámetro 'error'
         console.error('Error al cargar autos:', error);
       }
     );
@@ -38,10 +39,9 @@ export class ListaAutosComponent implements OnInit {
         this.servicioAuto.eliminarAuto(key).subscribe(
           () => {
             console.log('Auto eliminado con éxito');
-  
             this.cargarAutos();
           },
-          (error) => {
+          (error) => { // Corrección: tipado explícito del parámetro 'error'
             console.error('Error al eliminar auto:', error);
           }
         );
@@ -51,4 +51,3 @@ export class ListaAutosComponent implements OnInit {
     }
   }
 }
-

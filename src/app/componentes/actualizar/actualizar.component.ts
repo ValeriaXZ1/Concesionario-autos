@@ -1,3 +1,4 @@
+// src/app/componentes/actualizar/actualizar.component.ts
 import { Component, OnInit } from '@angular/core';
 import { AutoService } from '../../servicios/auto.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -34,7 +35,8 @@ export class ActualizarComponent implements OnInit {
     this.ruta.params.subscribe(params => {
       this.autoKey = params['key'];
       if (this.autoKey) {
-        this.servicioAuto.getAutoByKey(this.autoKey).subscribe(auto => {
+        // Corrección: se indica que 'auto' es de tipo 'Autos'
+        this.servicioAuto.getAutoByKey(this.autoKey).subscribe((auto: Autos) => {
           this.autoActualizar = auto;
         });
       }
