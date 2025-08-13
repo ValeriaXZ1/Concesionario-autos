@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AutoService } from '../../servicios/auto.service';
 import { Autos } from '../../interface/autos';
-import { CommonModule } from '@angular/common'; // Importa CommonModule para @for
-import { RouterLink } from '@angular/router'; // Importa RouterLink para la navegación
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router'; 
 
 @Component({
   selector: 'app-lista-autos',
   standalone: true,
-  imports: [CommonModule, RouterLink], // Agrega CommonModule y RouterLink
+  imports: [CommonModule, RouterLink], 
   templateUrl: './lista-autos.component.html',
   styleUrls: ['./lista-autos.component.css']
 })
@@ -38,7 +38,7 @@ export class ListaAutosComponent implements OnInit {
         this.servicioAuto.eliminarAuto(key).subscribe(
           () => {
             console.log('Auto eliminado con éxito');
-            // Recargar la lista después de eliminar
+  
             this.cargarAutos();
           },
           (error) => {

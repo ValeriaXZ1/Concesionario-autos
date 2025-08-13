@@ -2,18 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { AutoService } from '../../servicios/auto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { Autos } from '../../interface/autos'; // Importa la interfaz
+import { Autos } from '../../interface/autos'; 
 
 @Component({
   selector: 'app-actualizar',
-  standalone: true, // Agrega 'standalone: true' si es un componente independiente
+  standalone: true, 
   imports: [FormsModule],
   templateUrl: './actualizar.component.html',
   styleUrl: './actualizar.component.css'
 })
 export class ActualizarComponent implements OnInit {
 
-  // autoActualizar contendrá los datos del formulario y la clave
   autoActualizar: Autos = {
     tipo: '',
     marca: '',
@@ -22,7 +21,7 @@ export class ActualizarComponent implements OnInit {
     placa: ''
   };
 
-  autoKey: string = ''; // Guardará la clave del auto
+  autoKey: string = ''; 
 
   constructor(
     private servicioAuto: AutoService,
@@ -31,9 +30,9 @@ export class ActualizarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // Obtener la clave del auto desde los parámetros de la URL
+    
     this.ruta.params.subscribe(params => {
-      this.autoKey = params['key']; // 'key' es el nombre que usaremos en la ruta
+      this.autoKey = params['key'];
       if (this.autoKey) {
         this.servicioAuto.getAutoByKey(this.autoKey).subscribe(auto => {
           this.autoActualizar = auto;
