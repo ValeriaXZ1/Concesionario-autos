@@ -17,7 +17,7 @@ export class AutoService {
         return this.http.post(`${this.API_AUTO}autos.json`, auto);
     }
 
-    // Este método ahora transforma la respuesta de Firebase en un array con las claves
+
     agregarAutos(): Observable<Autos[]> {
         return this.http.get<{ [key: string]: Autos }>(`${this.API_AUTO}autos.json`).pipe(
             map(response => {
@@ -37,12 +37,12 @@ export class AutoService {
     }
 
     eliminarAuto(key: string): Observable<any> {
-        // Ahora usamos la clave (key) para eliminar el auto específico
+    
         return this.http.delete(`${this.API_AUTO}autos/${key}.json`);
     }
 
     actualizarAuto(key: string, auto: any): Observable<any> {
-        // Corregimos la URL y usamos la clave (key) para actualizar el auto específico
+
         return this.http.put(`${this.API_AUTO}autos/${key}.json`, auto);
     }
 }
