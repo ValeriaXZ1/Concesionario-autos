@@ -16,9 +16,9 @@ export class AuthenService {
 
   constructor() { }
 
-  login(usuario: string, password: string): boolean {
+  login=(usuario: string, password: string)=> {
     if (usuario === this.usuarios.usuario && password === this.usuarios.password) {
-      localStorage.setItem('usuario', usuario);
+      localStorage.setItem('user', usuario);
       this.loggedIn.next(true);
       return true;
     } else {

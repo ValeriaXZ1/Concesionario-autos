@@ -9,16 +9,17 @@ import { ListaAutosComponent } from './componentes/lista-autos/lista-autos.compo
 import { LoginComponent } from './componentes/login/login.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { authentGuard } from './guardianes/authent.guard';
+import { registroGuard } from './guardianes/registro.guard';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'formulario', component: FormularioComponent, canActivate: [authentGuard] },
-    { path: 'autos', component: ListaAutosComponent, canActivate: [authentGuard] },
-    { path: 'autos/:id', component: ActualizarComponent, canActivate: [authentGuard] },
+    { path: 'formulario', component: FormularioComponent,  },
+    { path: 'autos', component: ListaAutosComponent, },
+    { path: 'autos/:id', component: ActualizarComponent },
     { path: 'nosotros', component: NostrosComponent },
-    { path: 'registro', component: RegistroComponent },
-    { path: 'vehiculos', component: VehiculosComponent, canActivate: [authentGuard] },
-    { path: 'productos', component: ProductosComponent, canActivate: [authentGuard] },
+    { path: 'registro', component: RegistroComponent, canDeactivate: [registroGuard] },
+    { path: 'vehiculos', component: VehiculosComponent, },
+    { path: 'productos', component: ProductosComponent,  },
     { path: 'login', component: LoginComponent },
     { path: '**', redirectTo: '' } // Ruta para manejar URL incorrectas
 ];

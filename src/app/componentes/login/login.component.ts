@@ -2,13 +2,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenService } from '../../servicios/authen.service';
-import { FormsModule } from '@angular/forms'; // Se importa para el two-way data binding
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Se importa para el two-way data binding
 import { CommonModule } from '@angular/common'; // Asegúrate de tenerlo importado
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
