@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ListaAutosComponent implements OnInit {
 
-  autos: Autos[] = [];
+  autos: any[] = [];
 
   constructor(private servicioAuto: AutoService) { }
 
